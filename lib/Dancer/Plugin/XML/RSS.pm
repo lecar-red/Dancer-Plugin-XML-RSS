@@ -31,7 +31,7 @@ register_plugin;
 
 =head1 NAME
 
-Dancer::Plugin::XML::RSS - Dancer plugin for using XML::RSS
+Dancer::Plugin::XML::RSS - Dancer plugin for using XML::RSS to parse or create RSS feeds
 
 =head1 VERSION
 
@@ -41,8 +41,8 @@ Version 0.01
 
 =head1 SYNOPSIS
 
-This wil allow you to use XML::RSS from inside of your dancer application and
-configure XML::RSS using the standard Dancer configuration file.
+Allows access to XML::RSS object from inside of your Dancer application and
+default configuration of XML::RSS using the standard Dancer configuration file.
 
     package MyDancerApp;
 
@@ -80,6 +80,14 @@ configure XML::RSS using the standard Dancer configuration file.
         rss_output;
     };
 
+=head1 DESCRIPTION
+
+Provides a simple way to parse RSS files by using C<XML::RSS>. It will hold onto currently
+parsed feed or keyword 'rss' will return object instance for application use.
+
+Using the 'rss_output' command it will first create correct content type and then 
+serialize object into RSS XML for use in route. 
+
 =head1 CONFIGURATION 
 
 XML:RSS configuration parameters will be taken from your C<Dancer> application config file. They should be specified as:
@@ -90,7 +98,6 @@ XML:RSS configuration parameters will be taken from your C<Dancer> application c
 
 See C<XML::RSS> for more detail on configuration options.
 
-TODO: Might be helpful to have channel details setup in configuration file
 
 =head1 SUBROUTINES/METHODS
 
@@ -152,7 +159,15 @@ L<http://search.cpan.org/dist/Dancer-Plugin-XML-RSS/>
 
 =back
 
-=head1 ACKNOWLEDGEMENTS
+=head1 TODO
+
+=over 4
+
+=item * Add configuration of output header with config file
+
+=item * Use configuration file to setup details of channel for rss output
+
+=back
 
 =head1 LICENSE AND COPYRIGHT
 
@@ -166,7 +181,7 @@ See http://dev.perl.org/licenses/ for more information.
 
 =head1 SEE ALSO
 
-C<Dancer>, C<XML::RSS>, C<Dancer::Plugin>
+C<Dancer>, C<XML::RSS>, C<Dancer::Plugin>, C<Dancer::Plugin::Feed>
 
 =cut
 
