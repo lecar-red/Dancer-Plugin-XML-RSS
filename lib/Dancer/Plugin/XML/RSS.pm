@@ -5,8 +5,6 @@ use Dancer::Plugin;
 
 use XML::RSS;
 
-our $VERSION = '0.01';
-
 register 'rss' => sub {
     my $option   = shift; # 'new' force creation of new obj
     my $settings = plugin_setting || {};
@@ -29,15 +27,9 @@ register 'rss_output' => sub {
 
 register_plugin;
 
-=head1 NAME
+1;
 
-Dancer::Plugin::XML::RSS - Dancer plugin for using XML::RSS to parse or create RSS feeds
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
+# ABSTRACT: Dancer plugin for using XML::RSS to parse or create RSS feeds
 
 =head1 SYNOPSIS
 
@@ -141,19 +133,9 @@ You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker (report bugs here)
+=item * Github's Bug Tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-XML-RSS>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Dancer-Plugin-XML-RSS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Dancer-Plugin-XML-RSS>
-
-=item * Search CPAN
+L<http://metacpan.org/dist/Dancer-Plugin-XML-RSS/>
 
 L<http://search.cpan.org/dist/Dancer-Plugin-XML-RSS/>
 
@@ -169,20 +151,3 @@ L<http://search.cpan.org/dist/Dancer-Plugin-XML-RSS/>
 
 =back
 
-=head1 LICENSE AND COPYRIGHT
-
-Copyright 2011 Lee Carmichael.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
-
-=head1 SEE ALSO
-
-C<Dancer>, C<XML::RSS>, C<Dancer::Plugin>, C<Dancer::Plugin::Feed>
-
-=cut
-
-1; # End of Dancer::Plugin::XML::RSS

@@ -1,5 +1,8 @@
 Revision history for Dancer-Plugin-XML-RSS
 
+0.02    Sept 19, 2013
+		Converted to Dist::Zilla
+
 0.01    June 03, 2011
         First version, released on an unsuspecting world. 
 
